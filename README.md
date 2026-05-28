@@ -34,7 +34,9 @@ Use Case: Verifies that raw management network paths (TCP Port 22) and credentia
 Advances from simple connectivity to pushing specific configuration blocks from external files and capturing immediate verification data.
 
 Key Mechanisms:
+
 send_config_from_file(): Reads Cisco CLI commands line-by-line from an external file (./configs/r1.cfg) and deploys them atomically.
+
 send_command(): Executes show run | include snmp-server to programmatically parse and verify that the target configurations were correctly running in the running-config.
 
 ## 3. Loop-Driven Multi-Device Configurations (multiple_device_config.py)
@@ -48,8 +50,11 @@ Core Function: Iterates through r1, r2, and r3 metadata using a python for route
 The most mature stage of the automation pipeline, decoupling infrastructure definitions from runtime deployment values.
 
 Advanced Concepts:
+
 Data Decoupling: Separates static access credentials (inventory) from dynamic desired network states (ip_info dict containing specific Loopback and Subnet Mask definitions).
+
 String Templates: Uses format strings such as "interface {}" and "ip address {} {}" to dynamically render runtime variables into precise Cisco IOS-XE syntax.
+
 send_config_set(): Batches the programmatically generated commands into individual transactional execution blocks per device.
 
 Sample Execution Output

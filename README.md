@@ -24,7 +24,9 @@ The repository structures the learning curve into 4 progressive automation stage
 ## 1. Basic Connectivity Test (exploring_netmiko.py)
 
 The foundational script used to verify network reachability and SSH authentication parameters.
+
 Core Function: Uses Netmiko's ConnectHandler class to initiate a secure SSH session to a single target device (cisco_xe).
+
 Use Case: Verifies that raw management network paths (TCP Port 22) and credentials are functioning correctly before pushing changes.
 
 ## 2. File-Based Configuration Deployment (single_device_config.py)

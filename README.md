@@ -21,13 +21,13 @@ Automation Scripts Overview
 
 The repository structures the learning curve into 4 progressive automation stages:
 
-1. Basic Connectivity Test (exploring_netmiko.py)
+## 1. Basic Connectivity Test (exploring_netmiko.py)
 
 The foundational script used to verify network reachability and SSH authentication parameters.
 Core Function: Uses Netmiko's ConnectHandler class to initiate a secure SSH session to a single target device (cisco_xe).
 Use Case: Verifies that raw management network paths (TCP Port 22) and credentials are functioning correctly before pushing changes.
 
-2. File-Based Configuration Deployment (single_device_config.py)
+## 2. File-Based Configuration Deployment (single_device_config.py)
 
 Advances from simple connectivity to pushing specific configuration blocks from external files and capturing immediate verification data.
 
@@ -35,13 +35,13 @@ Key Mechanisms:
 send_config_from_file(): Reads Cisco CLI commands line-by-line from an external file (./configs/r1.cfg) and deploys them atomically.
 send_command(): Executes show run | include snmp-server to programmatically parse and verify that the target configurations were correctly running in the running-config.
 
-3. Loop-Driven Multi-Device Configurations (multiple_device_config.py)
+## 3. Loop-Driven Multi-Device Configurations (multiple_device_config.py)
 
 Demonstrates scalability by introducing a Python Dictionary (inventory) acting as a lightweight Source of Truth to programmatically target multiple nodes sequentially.
 
 Core Function: Iterates through r1, r2, and r3 metadata using a python for router, detail in inventory.items(): loop, standardizing configurations globally without manual intervention.
 
-4. Dynamic Data Modeling & Command Construction (construct_script.py)
+## 4. Dynamic Data Modeling & Command Construction (construct_script.py)
 
 The most mature stage of the automation pipeline, decoupling infrastructure definitions from runtime deployment values.
 

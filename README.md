@@ -1,4 +1,5 @@
 ### Netmiko Python Module Practice
 
 
-![Network Topology ](images/net_topology_github.png)
+<img src="net_topology_github.png" alt="Network Topology" width="600">
+

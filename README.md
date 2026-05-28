@@ -53,6 +53,7 @@ send_config_set(): Batches the programmatically generated commands into individu
 Sample Execution Output
 Below is the verified terminal logging output when executing single_device_config.py to deploy SNMP settings:
 
+```bash
 Connecting to r1
 Sending SNMP Configurations to r1...
 Commands sent to device...
@@ -64,4 +65,4 @@ snmp-server community cisco-secure RW
 snmp-server location california
 snmp-server contact cisco_lab
 Disconnecting from r1...
-
+```
